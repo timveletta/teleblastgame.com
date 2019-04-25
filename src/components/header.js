@@ -1,42 +1,34 @@
-import { Link } from "gatsby"
+import styled from "styled-components"
 import PropTypes from "prop-types"
 import React from "react"
+import Image from "./image"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Container = styled.header`
+  height: 100vh;
+  min-height: 600px;
+
+  background-image: url("./static/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: grid;
+  grid-template-rows: 1rem auto;
+
+  margin-bottom: -4rem;
+`
+
+const Links = styled.div`
+  color: #ffffff;
+`
+
+const Header = () => (
+  <Container>
+    <Links>Discord Twitter Instagram Facebook Presskit</Links>
+    <div>
+      <Image />
     </div>
-  </header>
+  </Container>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
