@@ -11,6 +11,7 @@ cache:
 
 before_script:
   - apk add --no-cache --virtual .gyp python make g++ \
+    && npm install -g gatsby-cli
     && npm ci --only=production \
     && apk del .gyp
 
