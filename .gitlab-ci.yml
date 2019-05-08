@@ -9,16 +9,14 @@ cache:
   paths:
     - node_modules/
 
-before_script:
-  - apk add --no-cache --virtual .gyp python make g++ \
-    && npm install -g gatsby-cli
-    && npm ci --only=production \
-    && apk del .gyp
-
 build:
   stage: build
   image: node:alpine
   script:
+    - apk add --no-cache --virtual .gyp python make g++ \
+      && npm install -g gatsby-cli
+      && npm ci --only=production \
+      && apk del .gyp
     - npm run build
   artifacts:
     paths:
