@@ -261,7 +261,7 @@ const Presskit = () => (
         <div>
           <h1>Images</h1>
           <Alert>
-            <a href={ScreenshotsZip}>
+            <a href="/screenshots.zip">
               download all screenshots and photos as .zip
             </a>
           </Alert>
@@ -286,7 +286,7 @@ const Presskit = () => (
         <div>
           <h1>Logo and Icon</h1>
           <Alert>
-            <a href={LogoZip}>download all as .zip</a>
+            <a href="/logo.zip">download all as .zip</a>
           </Alert>
           <ImageDisplay>
             <img src={Logo1} alt="TeleBlast Logo" />
