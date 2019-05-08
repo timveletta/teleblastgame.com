@@ -10,9 +10,9 @@ cache:
     - node_modules/
 
 before_script:
-  - apk --no-cache add g++ gcc libgcc libstdc++ linux-headers make python
-  - npm install --quiet node-gyp -g
-  - npm ci --only=production
+  - apk add --no-cache --virtual .gyp python make g++ \
+    && npm ci --only=production \
+    && apk del .gyp
 
 build:
   stage: build
