@@ -5,18 +5,16 @@ const Container = styled.div`
   color: white;
   max-width: 800px;
   margin: 4rem auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
-
-  > h2 {
-    grid-column: span 2;
+  > div {
+    display: flex;
+    flex-wrap: wrap;
   }
 `
 
 const Question = styled.div`
+  flex: 1 1 300px;
   line-height: 1.5;
-  padding: 0.2rem;
+  padding: 1rem;
   h3 {
     margin-bottom: 0.2rem;
   }
@@ -55,14 +53,19 @@ const FAQ = () => (
           prioritising. You should check out Parsec though!
         </p>
       </Question>
-    </div>
-    <div>
       <Question>
         <h3>Do I need a gamepad to play on PC?</h3>
         <p>
           While gamepad is by far the best way to play TeleBlast, it is still
           possible to play with 2 players using the same keyboard, one using
           WASD and the other using the arrow keys
+        </p>
+      </Question>
+      <Question>
+        <h3>Can I stream this game?</h3>
+        <p>
+          Absolutely! Feel free to get in touch and we can promote your
+          stream/video through our social media channels when you do!
         </p>
       </Question>
       <Question>

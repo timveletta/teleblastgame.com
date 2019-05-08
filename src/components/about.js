@@ -1,12 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 
+import GameModesImage from "../images/game-modes.png"
+import LevelsImage from "../images/levels.png"
+import PlayersImage from "../images/players.jpg"
+
 const Container = styled.div`
   color: white;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 4rem 1rem;
 `
 
 const Header = styled.div`
@@ -18,16 +22,18 @@ const Header = styled.div`
 `
 
 const Features = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 
   > div {
-    flex: 1 1 300px;
-    padding: 1rem;
-
     img {
       border-radius: 4px;
-      border: 2px solid #ffffff;
+      border: 4px solid #ffffff;
       width: 100%;
       height: auto;
       margin-bottom: 0;
@@ -49,15 +55,15 @@ const About = () => (
     </Header>
     <Features>
       <div>
-        <img src="https://via.placeholder.com/300x200" />
+        <img src={PlayersImage} />
         <h3>Simple, hectic multiplayer action</h3>
       </div>
       <div>
-        <img src="https://via.placeholder.com/300x200" />
-        <h3>Have a blast in 4 game modes</h3>
+        <img src={GameModesImage} />
+        <h3>Have a blast in 3 game modes</h3>
       </div>
       <div>
-        <img src="https://via.placeholder.com/300x200" />
+        <img src={LevelsImage} />
         <h3>More than 5 arenas to battle for supremacy</h3>
       </div>
     </Features>

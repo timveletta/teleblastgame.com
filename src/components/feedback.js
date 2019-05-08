@@ -6,21 +6,26 @@ import Img from "gatsby-image"
 const Container = styled.div`
   margin: 0 auto;
   max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  display: flex;
+  flex-wrap: wrap;
 
   align-items: center;
-  justify-items: center;
+  justify-content: space-around;
 
   img {
-    width: 400px;
+    max-width: 400px;
     margin-bottom: 2rem;
+    flex: 1 1 400px;
+  }
+
+  > div {
+    flex: 2 1 600px;
   }
 `
 
 const QuoteCard = styled.div`
-  max-width: 600px;
   color: #ffffff;
+  padding: 0 2rem;
 
   h4 {
     text-align: right;
@@ -29,6 +34,7 @@ const QuoteCard = styled.div`
 
   h3 {
     margin-bottom: 0;
+    line-height: 1.5;
   }
 `
 
@@ -38,25 +44,27 @@ const Feedback = () => (
     <div>
       <QuoteCard>
         <h3>
-          "This is a quote that someone said about the game! Yay! I'm glad they
-          had fun!"
+          "Competitive multiplayer sports/combat games with a unique mechanic
+          and that sound great to stream? Count me in. Not to mention the a e s
+          t h e t i c aesthetic."
         </h3>
-        <h4>- Who Said It</h4>
+        <h4>- Matt McLeod, Select Start</h4>
       </QuoteCard>
       <QuoteCard>
+        <h3>
+          "Teleblast took me by surprise, offering up a tight, well-executed
+          game about exploding and teleporting, and I’d dare call it my game of
+          the show."
+        </h3>
+        <h4>- Nick Ballantyne, Game Cloud</h4>
+      </QuoteCard>
+      {/* <QuoteCard>
         <h3>
           "This is a quote that someone said about the game! Yay! I'm glad they
           had fun!"
         </h3>
         <h4>- Who Said It</h4>
-      </QuoteCard>
-      <QuoteCard>
-        <h3>
-          "This is a quote that someone said about the game! Yay! I'm glad they
-          had fun!"
-        </h3>
-        <h4>- Who Said It</h4>
-      </QuoteCard>
+      </QuoteCard> */}
     </div>
   </Container>
 )
