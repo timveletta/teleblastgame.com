@@ -10,13 +10,13 @@ cache:
     - node_modules/
 
 before_script:
+  - apk --no-cache add g++ gcc libgcc libstdc++ linux-headers make python
   - npm ci --only=production
 
 build:
   stage: build
   image: node:alpine
   script:
-    - apk --no-cache add g++ gcc libgcc libstdc++ linux-headers make python
     - npm run build
   artifacts:
     paths:
