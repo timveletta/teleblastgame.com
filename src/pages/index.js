@@ -12,7 +12,7 @@ import SteamWidget from "../components/steam-widget"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Header />
     <Trailer />
     <Feedback />
