@@ -17,7 +17,7 @@ before_script:
 
 build:
   stage: build
-  image: node:latest
+  image: node:11
   script:
     - node_modules/.bin/gatsby build --prefix-paths
   artifacts:
