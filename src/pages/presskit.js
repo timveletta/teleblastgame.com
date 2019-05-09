@@ -15,9 +15,9 @@ import Screenshot9 from "../images/menu-1.png"
 // import ScreenshotsZip from "../images/screenshots.zip"
 // import LogoZip from "../images/logo.zip"
 
-import Logo1 from "../images/TeleBlast_Logo_Vice.png"
-import Logo2 from "../images/TeleBlast_Logo_Vice-Shadowed.png"
-import Logo3 from "../images/TeleBlast_Logo_Vice-Outlined.png"
+import Logo1 from "../images/logo.png"
+import Logo2 from "../images/logo-shadowed.png"
+import Logo3 from "../images/logo-outlined.png"
 
 import Alpha from "../images/alpha.png"
 
