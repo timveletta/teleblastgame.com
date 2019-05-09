@@ -28,6 +28,7 @@ import Alert from "../components/alert"
 const Container = styled.div`
   color: #000000;
   padding: 1rem;
+  background-color: #ffffff !important;
 
   display: grid;
   grid-template-columns: 1fr 3fr;
