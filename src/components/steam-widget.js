@@ -85,7 +85,7 @@ const SteamWidget = () => (
     <div>
       <h3>Available Now on Steam Early Access for PC / Mac / Linux</h3>
       <div class="show-sm">
-        <a href="https://store.steampowered.com/widget/915420/">
+        <a href="https://store.steampowered.com/app/915420/TeleBlast/">
           <img src={SteamLogo} alt="View Game on Steam" />
         </a>
       </div>
