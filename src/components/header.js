@@ -4,11 +4,13 @@ import React from "react"
 import Image from "./image"
 import { FaDiscord, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 
+import BackgroundImage from "../images/background.png"
+
 const Container = styled.header`
   height: 100vh;
   min-height: 600px;
 
-  background-image: url("./static/background.png");
+  background-image: url(${BackgroundImage});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
