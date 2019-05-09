@@ -29,13 +29,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `TeleBlast`,
+        short_name: `TeleBlast`,
         start_url: `/`,
-        background_color: `#4C4CB5`,
-        theme_color: `#4C4CB5`,
+        background_color: `#0b0029`,
+        theme_color: `#0b0029`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

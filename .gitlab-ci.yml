@@ -13,7 +13,7 @@ before_script:
   - apt-get update
   - apt-get install python
   - npm install gatsby-cli
-  - npm install
+  - npm ci --only=production
 
 build:
   stage: build
@@ -35,7 +35,7 @@ deploy-dev:
   <<: *deploy
   script:
     - aws s3 cp ./public s3://teleblastgame.com-dev --recursive
-    - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
+    - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID_DEV --paths '/*'
   only:
     - develop
 
@@ -43,5 +43,6 @@ deploy-prod:
   <<: *deploy
   script:
     - aws s3 cp ./public s3://teleblastgame.com-prod  --recursive
+    - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
   only:
     - master
