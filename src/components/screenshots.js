@@ -44,9 +44,12 @@ const Screenshots = ({ data }) => (
     render={({ screenshots }) => (
       <Container>
         {screenshots &&
-          screenshots.edges.map(i => (
-            <Img key={i.node.name} fluid={i.node.childImageSharp.fluid} />
-          ))}
+          screenshots.edges.map(
+            i =>
+              i.node.childImageSharp && (
+                <Img key={i.node.name} fluid={i.node.childImageSharp.fluid} />
+              )
+          )}
       </Container>
     )}
   />
