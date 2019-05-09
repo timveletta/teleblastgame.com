@@ -26,7 +26,7 @@ import SEO from "../components/seo"
 import Alert from "../components/alert"
 
 const Container = styled.div`
-  color: #ffffff;
+  color: #000000;
   padding: 1rem;
 
   display: grid;
@@ -46,12 +46,12 @@ const Container = styled.div`
   }
 
   hr {
-    color: #ffffff;
-    background-color: #ffffff;
+    color: #000000;
+    background-color: #000000;
   }
 
   a {
-    color: #ffffff;
+    color: #000000;
   }
 `
 
@@ -88,7 +88,7 @@ const ImageDisplay = styled.div`
 `
 
 const VideoWrapper = styled.div`
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
   border-radius: 4px;
   margin-bottom: 1rem;
   display: flex;
