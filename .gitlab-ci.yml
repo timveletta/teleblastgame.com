@@ -13,7 +13,7 @@ before_script:
   - apt-get update
   - apt-get install python
   - npm install gatsby-cli
-  - npm ci --only=production
+  - npm install
 
 build:
   stage: build
